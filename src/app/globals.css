@@ -1,26 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Bebas+Neue&family=Noto+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Budhipur colour palette */
+  --color-ink:        #1c1408;
+  --color-cream:      #fdf4e3;
+  --color-parch:      #f5e8c8;
+  --color-border:     #d4b896;
+  --color-muted:      #6b5a3e;
+  --color-teal:       #1a6b6b;
+  --color-gold:       #e8a820;
+  --color-rose:       #b83232;
+  --color-jade:       #3a7d44;
+
+  /* Day-specific accent colours */
+  --color-ochre:      #c8720a;   /* Monday  — Spatial */
+  --color-indigo:     #2d3a8c;   /* Tuesday — Logic   */
+  --color-forest:     #1a6b6b;   /* Wednesday — Visual */
+  --color-crimson:    #b83232;   /* Thursday — Word   */
+
+  /* Fonts */
+  --font-serif:  'Crimson Pro', Georgia, serif;
+  --font-caps:   'Bebas Neue', sans-serif;
+  --font-sans:   'Noto Sans', system-ui, sans-serif;
+  --font-mono:   'DM Mono', monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: var(--color-cream);
+  --foreground: var(--color-ink);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Puzzle mount — engines size themselves relative to this container */
+.puzzle-mount {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Engine canvas/table resets */
+.puzzle-mount canvas {
+  display: block;
+  touch-action: none;
+}
+
+/* Smooth focus rings */
+*:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
 }
