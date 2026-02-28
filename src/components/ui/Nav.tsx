@@ -9,9 +9,10 @@ import type { User } from '@supabase/supabase-js';
 export function Nav() {
   const pathname = usePathname();
   const [user, setUser] = useState<User | null>(null);
-  const supabase = createClient();
 
   useEffect(() => {
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return;
+    const supabase = createClient();
     supabase.auth.getUser().then(({ data }) => setUser(data.user));
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {
       setUser(session?.user ?? null);
@@ -23,7 +24,7 @@ export function Nav() {
   if (pathname.startsWith('/login') || pathname.startsWith('/signup')) return null;
 
   async function handleSignOut() {
-    await supabase.auth.signOut();
+    await createClient().auth.signOut();
     window.location.href = '/login';
   }
 
