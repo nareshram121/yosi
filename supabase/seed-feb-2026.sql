@@ -53,4 +53,11 @@ INSERT INTO puzzles (id, puzzle_date, engine_type, config, day_of_week, week_num
 -- ─── Feb 28 · Saturday · Sudoku 4×4 Emoji Stars · Week 4 ──
 ('2026-02-28', '2026-02-28', 'sudoku',
  '{"id":"sudoku_20260228","title":"The Star-Counter''s Grid","storyBeat":"The temple astronomer kept count of the night sky with four kinds of stars — bright stars ⭐, glowing stars 🌟, spinning stars 💫, and sparkling stars ✨. She arranged them in a four-by-four grid where every row, every column, and every square of four held each kind of star exactly once. ''Can you complete her count?'' she asked Hari.","hint":"Chatur says: ''Every row, column, and 2×2 square must hold all four star symbols. Start with the row or box that already has the most stars filled in.''","winMessage":"The grid was complete: every row, column, and square of four held all four kinds of star. The astronomer looked up from her notebook. ''The sky is in order,'' she said simply.","grade":"2-5","category":"2.4","size":4,"digits":["⭐","🌟","💫","✨"],"givens":["⭐",0,0,"✨",0,"✨",0,0,"🌟",0,0,0,0,0,"🌟","⭐"],"solution":["⭐","🌟","💫","✨","💫","✨","⭐","🌟","🌟","⭐","✨","💫","✨","💫","🌟","⭐"],"regions":[[0,1,4,5],[2,3,6,7],[8,9,12,13],[10,11,14,15]]}',
- 5, 4, '2-5');
+ 5, 4, '2-5')
+ON CONFLICT (id) DO UPDATE SET
+  puzzle_date  = EXCLUDED.puzzle_date,
+  engine_type  = EXCLUDED.engine_type,
+  config       = EXCLUDED.config,
+  day_of_week  = EXCLUDED.day_of_week,
+  week_number  = EXCLUDED.week_number,
+  grade_band   = EXCLUDED.grade_band;
