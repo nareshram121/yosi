@@ -10,6 +10,7 @@ export default function SignupPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [notice, setNotice] = useState('');
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -19,7 +20,7 @@ export default function SignupPage() {
     setError('');
 
     const supabase = createClient();
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: { data: { full_name: displayName } },
@@ -28,9 +29,14 @@ export default function SignupPage() {
     if (error) {
       setError(error.message);
       setLoading(false);
-    } else {
+    } else if (data.session) {
+      // Email confirmation is off — user is signed in immediately
       router.push('/');
       router.refresh();
+    } else {
+      // Email confirmation is on — tell them to check their inbox
+      setNotice('Account created! Check your email and click the confirmation link, then sign in.');
+      setLoading(false);
     }
   }
 
@@ -90,6 +96,12 @@ export default function SignupPage() {
             />
           </div>
 
+          {notice && (
+            <p className="text-sm px-3 py-2 rounded-lg"
+              style={{ background: '#f0fdf4', color: '#166534', border: '1px solid #bbf7d0' }}>
+              {notice}
+            </p>
+          )}
           {error && (
             <p className="text-sm px-3 py-2 rounded-lg"
               style={{ background: '#fef2f2', color: 'var(--color-rose)', border: '1px solid #fecaca' }}>
