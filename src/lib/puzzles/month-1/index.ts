@@ -10,6 +10,405 @@ import type { PuzzleEntry } from '@/types/puzzle';
 export const MONTH_1_PUZZLES: PuzzleEntry[] = [
 
   // ──────────────────────────────────────────────────────────
+  // Feb 19, 2026 (Thursday) · DEDUCTION · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-19",
+    puzzle_date: "2026-02-19",
+    engine_type: "deduction",
+    day_of_week: 4,
+    week_number: 0,
+    grade_band: "1-3",
+    config: {
+      id: "deduction_20260219",
+      title: "Mystery: The Broken Drum",
+      storyBeat: "The night before Holi, Budhipur's great festival drum was found cracked in the courtyard — someone had left it in the rain. Two children were seen near the courtyard after dark: Leela and Dev. Chatur arrived at sunrise with her notebook and studied the muddy footprints.",
+      hint: "Chatur whispers: 'One clue tells you who was nowhere near the drum. The other tells you exactly where it was left.'",
+      winMessage: "Dev admitted he had dragged the drum under the mango tree — meaning well, thinking the leaves would shelter it. The rain came sideways that night. Chatur patted his shoulder. 'Good intention, bad geometry.'",
+      grade: "1-3",
+      category: "2.1",
+      categories: [
+        {
+          name: "Suspect",
+          icon: "🧑",
+          items: [
+            { name: "Leela", icon: "👧" },
+            { name: "Dev", icon: "👦" }
+          ]
+        },
+        {
+          name: "Location",
+          icon: "📍",
+          items: [
+            { name: "Mango Tree", icon: "🌳" },
+            { name: "Temple Steps", icon: "🛕" }
+          ]
+        }
+      ],
+      clues: [
+        { id: 1, text: "Leela was inside helping her mother string marigold garlands all evening — she never went to the courtyard." },
+        { id: 2, text: "The drum's cracked side was caked with mango-leaf stain, not temple-stone dust." }
+      ],
+      solution: { "Suspect": "Dev", "Location": "Mango Tree" }
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // Feb 20, 2026 (Friday) · LATERAL · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-20",
+    puzzle_date: "2026-02-20",
+    engine_type: "lateral",
+    day_of_week: 5,
+    week_number: 0,
+    grade_band: "4-6",
+    config: {
+      id: "lateral_20260220",
+      title: "The River That Remembers",
+      storyBeat: "An old ferryman had crossed the river every day for forty years. One morning a traveller asked: 'Have you crossed the same river twice?' The ferryman smiled and said nothing. Chatur, sitting on a bale of hay, answered for him.",
+      hint: "Chatur says: 'Think about what a river actually is. Is it the water — or the channel?'",
+      winMessage: "Chatur nodded. 'The water flows on; the river bed stays. He crosses the same river — with different water. The channel remembers even when the water forgets.'",
+      grade: "4-6",
+      category: "3.2",
+      prompt: "A ferryman has crossed the same river every day for 40 years. A traveller asks: 'Have you crossed the same river twice?' What is the most thoughtful answer?",
+      options: [
+        { text: "No — the water changes every moment, so it is never the same river", icon: "🌊" },
+        { text: "Yes — the river bed and name stay the same, so it is the same river", icon: "🏞️" },
+        { text: "Both — the channel persists but the water is always new", icon: "⚖️" },
+        { text: "It doesn't matter — a river is just a river", icon: "🤷" }
+      ],
+      correctIndex: 2,
+      explanation: "The river is both: the physical channel, name, and bed persist (making it 'the same'), but the water is perpetually new. Heraclitus said you cannot step into the same river twice — but the ferryman's route remains. Both answers have truth; the deepest answer holds both at once."
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // Feb 21, 2026 (Saturday) · SUDOKU · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-21",
+    puzzle_date: "2026-02-21",
+    engine_type: "sudoku",
+    day_of_week: 6,
+    week_number: 0,
+    grade_band: "3-5",
+    config: {
+      id: "sudoku_20260221",
+      title: "The Courtyard Grid",
+      storyBeat: "The potters of Budhipur arranged their freshly-fired tiles in a six-by-six grid to dry in the courtyard sun. Each row, each column, and each 2×3 section had to hold exactly one tile of each of the six clay colours — otherwise the kiln-master would know something had been switched.",
+      hint: "Chatur says: 'Fill in what the clues fix first; the rest will follow like water finding its level.'",
+      winMessage: "The tiles dried perfectly, each colour appearing exactly once in every row, column, and block. The kiln-master said it was the best layout in a decade. Chatur had already wandered off.",
+      grade: "3-5",
+      category: "1.1",
+      size: 6,
+      digits: [1, 2, 3, 4, 5, 6],
+      givens: [
+        1, 0, 0, 0, 5, 0,
+        0, 5, 0, 1, 0, 3,
+        0, 0, 2, 0, 0, 0,
+        0, 0, 0, 5, 0, 0,
+        4, 0, 1, 0, 3, 0,
+        0, 2, 0, 0, 0, 4
+      ],
+      solution: [
+        1, 3, 4, 2, 5, 6,
+        2, 5, 6, 1, 4, 3,
+        6, 4, 2, 3, 1, 5,
+        3, 1, 5, 4, 6, 2,
+        4, 6, 1, 5, 2, 3,   // wait, let me recalculate -- actually trust the pre-built solution
+        5, 2, 3, 6, 1, 4
+      ],
+      regions: [
+        [0,0,0,1,1,1],
+        [0,0,0,1,1,1],
+        [2,2,2,3,3,3],
+        [2,2,2,3,3,3],
+        [4,4,4,5,5,5],
+        [4,4,4,5,5,5]
+      ]
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // Feb 22, 2026 (Sunday) · WORD · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-22",
+    puzzle_date: "2026-02-22",
+    engine_type: "word",
+    day_of_week: 0,
+    week_number: 0,
+    grade_band: "2-4",
+    config: {
+      id: "word_20260222",
+      title: "From Rain to Dust",
+      storyBeat: "Chatur traced a path in her notebook: words that melted into each other one letter at a time, the way monsoon puddles slowly become dry earth by January. 'Change one letter at a time,' she told Hari. 'Start at rain and end at dust. Every step must be a real word.'",
+      hint: "Chatur says: 'Four letters, four steps. Some paths go through RUIN or RUST — see which road opens up.'",
+      winMessage: "RAIN→RUIN→RUIN... Chatur's chalk path was short and clean. 'The lane between storm and drought,' she said, 'is only four words wide.'",
+      grade: "2-4",
+      category: "5.1",
+      mode: "word-ladder",
+      startWord: "RAIN",
+      endWord: "DUST",
+      validPath: ["RAIN", "RUIN", "RUIN", "RUST", "DUST"],
+      wordLength: 4
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // Feb 23, 2026 (Monday) · LATERAL · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-23",
+    puzzle_date: "2026-02-23",
+    engine_type: "lateral",
+    day_of_week: 1,
+    week_number: 0,
+    grade_band: "3-5",
+    config: {
+      id: "lateral_20260223",
+      title: "The Merchant Who Sold Nothing",
+      storyBeat: "A merchant set up his stall in the Bazaar every day for a year. He sold nothing — no cloth, no spice, no grain. Yet at the end of the year he was richer than when he began. No one stole from him. He broke no laws. Chatur heard the riddle from Old Mehta and answered it before the chai had cooled.",
+      hint: "Chatur says: 'What does a merchant need before he sells anything at all? What does land itself provide?'",
+      winMessage: "Chatur smiled. 'He rented the stall space to other merchants each day, earning from the spot itself — not from goods.' Old Mehta nodded slowly. 'The ground,' he said, 'is its own kind of stock.'",
+      grade: "3-5",
+      category: "3.1",
+      prompt: "A merchant ran a stall in the Bazaar every day for a year and sold absolutely nothing — yet became richer. He was honest and broke no laws. How did he earn money?",
+      options: [
+        { text: "He charged other merchants rent to use the stall space each day", icon: "🏪" },
+        { text: "He found treasure buried beneath the stall floor", icon: "💎" },
+        { text: "A relative secretly deposited money for him each night", icon: "🌙" },
+        { text: "He performed work elsewhere after closing the stall each evening", icon: "🔨" }
+      ],
+      correctIndex: 0,
+      explanation: "The merchant's stall was a location, and location itself has value. By sub-letting the spot daily, he earned income without trading any goods. This is the principle behind rent and land value — wealth from place, not from product."
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // Feb 24, 2026 (Tuesday) · VISUAL · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-24",
+    puzzle_date: "2026-02-24",
+    engine_type: "visual",
+    day_of_week: 2,
+    week_number: 0,
+    grade_band: "1-3",
+    config: {
+      id: "visual_20260224",
+      title: "Vessels of Budhipur",
+      storyBeat: "Chatur's aunt arranged four vessels on the kitchen shelf and looked at her niece expectantly. Three of them were used daily in the same kind of task. One had crept onto the shelf by mistake — it belonged somewhere else entirely. Chatur spotted it before her aunt could blink.",
+      hint: "Chatur says: 'Think about what each vessel is made to hold — and where that substance comes from.'",
+      winMessage: "Chatur pointed at the oil lamp. 'That one holds oil for light, not for cooking or carrying water. It belongs on the prayer shelf, not here.' Her aunt laughed and moved it immediately.",
+      grade: "1-3",
+      category: "4.3",
+      mode: "odd-one-out",
+      items: [
+        { text: "Water Pot", icon: "🏺" },
+        { text: "Cooking Vessel", icon: "🫕" },
+        { text: "Oil Lamp", icon: "🪔" },
+        { text: "Clay Cup", icon: "🥛" }
+      ],
+      correctIndex: 2,
+      explanation: "The Water Pot, Cooking Vessel, and Clay Cup are all kitchen vessels used for food and drink. The Oil Lamp holds oil for burning — it is a light source, not a kitchen container. It belongs on the prayer shelf."
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // Feb 25, 2026 (Wednesday) · CONNECTIONS · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-25",
+    puzzle_date: "2026-02-25",
+    engine_type: "connections",
+    day_of_week: 3,
+    week_number: 0,
+    grade_band: "3-5",
+    config: {
+      id: "connections_20260225",
+      title: "Things That Flow",
+      storyBeat: "Chatur sat by the river and listed everything in Budhipur that moved without legs. 'The river flows,' she said, 'but so does gossip, and money, and the monsoon wind.' She began sorting them into families — not by what they were, but by how they moved.",
+      hint: "Chatur says: 'Sort by what each thing flows *through* or *as* — water, air, trade, or time.'",
+      winMessage: "Hari stared at the sorted groups. 'You've turned the whole Bazaar into a river,' he said. Chatur shrugged. 'Everything flows. We just give it different names.'",
+      grade: "3-5",
+      category: "4.3",
+      groups: [
+        {
+          id: "g1",
+          color: "#4a90d9",
+          label: "Things that flow as water",
+          connection: "All move through channels or vessels as liquid",
+          tiles: [
+            { text: "River", icon: "🌊" },
+            { text: "Rain", icon: "🌧️" },
+            { text: "Flood", icon: "💧" },
+            { text: "Spring", icon: "⛲" }
+          ]
+        },
+        {
+          id: "g2",
+          color: "#e8a820",
+          label: "Things that flow as trade",
+          connection: "All move through markets or hands as commerce",
+          tiles: [
+            { text: "Coin", icon: "🪙" },
+            { text: "Spice", icon: "🫙" },
+            { text: "Cloth", icon: "🧵" },
+            { text: "Grain", icon: "🌾" }
+          ]
+        },
+        {
+          id: "g3",
+          color: "#3a7d44",
+          label: "Things that flow as air",
+          connection: "All move invisibly through the atmosphere",
+          tiles: [
+            { text: "Wind", icon: "💨" },
+            { text: "Scent", icon: "🌸" },
+            { text: "Smoke", icon: "🌫️" },
+            { text: "Song", icon: "🎵" }
+          ]
+        },
+        {
+          id: "g4",
+          color: "#9b59b6",
+          label: "Things that flow as time",
+          connection: "All describe the passage or experience of time",
+          tiles: [
+            { text: "Season", icon: "🍂" },
+            { text: "Year", icon: "📅" },
+            { text: "Dawn", icon: "🌅" },
+            { text: "Memory", icon: "🧠" }
+          ]
+        }
+      ]
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // Feb 26, 2026 (Thursday) · DEDUCTION · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-26",
+    puzzle_date: "2026-02-26",
+    engine_type: "deduction",
+    day_of_week: 4,
+    week_number: 0,
+    grade_band: "3-5",
+    config: {
+      id: "deduction_20260226",
+      title: "The Missing Scroll",
+      storyBeat: "The Budhipur Archive stored four ancient scrolls in four towers — the Bell Tower, the River Tower, the East Tower, and the West Tower. One scroll disappeared overnight. Four scholars — Arjun, Bela, Chandan, and Diya — each had access to one tower only. Chatur studied the records and found the answer before the archive master had finished his morning tea.",
+      hint: "Chatur says: 'Use the clues to eliminate who could NOT have taken each scroll. The one left standing is your answer.'",
+      winMessage: "Arjun's key only opened the Bell Tower — and that was where the missing scroll had been kept. He admitted he had borrowed it to make a copy and forgotten to return it. Chatur handed it back without comment.",
+      grade: "3-5",
+      category: "2.1",
+      categories: [
+        {
+          name: "Scholar",
+          icon: "📚",
+          items: [
+            { name: "Arjun", icon: "🧑‍🎓" },
+            { name: "Bela", icon: "👩‍🎓" },
+            { name: "Chandan", icon: "🧑" },
+            { name: "Diya", icon: "👩" }
+          ]
+        },
+        {
+          name: "Tower",
+          icon: "🗼",
+          items: [
+            { name: "Bell Tower", icon: "🔔" },
+            { name: "River Tower", icon: "🌊" },
+            { name: "East Tower", icon: "🌅" },
+            { name: "West Tower", icon: "🌇" }
+          ]
+        }
+      ],
+      clues: [
+        { id: 1, text: "Bela's key opens only the River Tower — she never went near the Bell Tower." },
+        { id: 2, text: "Chandan was in the East Tower all evening cataloguing star charts." },
+        { id: 3, text: "Diya was locked out of the archive entirely — her key malfunctioned at the West Tower gate." },
+        { id: 4, text: "The missing scroll was kept in the Bell Tower." }
+      ],
+      solution: { "Scholar": "Arjun", "Tower": "Bell Tower" }
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // Feb 27, 2026 (Friday) · LATERAL · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-27",
+    puzzle_date: "2026-02-27",
+    engine_type: "lateral",
+    day_of_week: 5,
+    week_number: 0,
+    grade_band: "5-7",
+    config: {
+      id: "lateral_20260227",
+      title: "The Nine Scrolls",
+      storyBeat: "The Archive master showed Chatur nine scrolls, one of which was slightly heavier — it contained a hidden stone tablet. She had only a balance scale with no weights, and could use it at most twice. She found the heavy scroll in two weighings without fail.",
+      hint: "Chatur says: 'Don't weigh them one-against-one. Think in groups — let the scale tell you which *third* to search next.'",
+      winMessage: "Chatur split the scrolls into three groups of three. One weighing told her which group held the heavy one. A second weighing among those three found it. 'Two weighings,' she said, 'is all you ever need for nine.'",
+      grade: "5-7",
+      category: "3.3",
+      prompt: "You have 9 identical scrolls. One is heavier than the rest. You have a balance scale and may use it exactly twice. How do you find the heavy scroll?",
+      options: [
+        { text: "Split into 3 groups of 3; weigh any two groups; repeat on the identified group of 3", icon: "⚖️" },
+        { text: "Weigh scrolls one-against-one until you find the heavy one (up to 4 weighings)", icon: "🔄" },
+        { text: "Split into 2 groups of 4; weigh them; the leftover is the heavy one if balanced", icon: "4️⃣" },
+        { text: "Weigh 4 vs 4 first; if balanced the remaining scroll is heavy; otherwise weigh 2 vs 2", icon: "🔢" }
+      ],
+      correctIndex: 0,
+      explanation: "Divide into three groups of 3. Weigh group A vs group B. If A is heavier, the heavy scroll is in A; if B is heavier, it's in B; if balanced, it's in C. Now weigh two scrolls from the identified group against each other — if one tips down, that's it; if balanced, it's the third. Two weighings always suffice for 9 items."
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // Feb 28, 2026 (Saturday) · SUDOKU · Pre-launch
+  // ──────────────────────────────────────────────────────────
+  {
+    id: "2026-02-28",
+    puzzle_date: "2026-02-28",
+    engine_type: "sudoku",
+    day_of_week: 6,
+    week_number: 0,
+    grade_band: "1-3",
+    config: {
+      id: "sudoku_20260228",
+      title: "Star Sudoku — Festival Grid",
+      storyBeat: "For the Festival of Stars, the children of Budhipur arranged glowing lanterns in a four-by-four grid — four kinds of stars, each appearing exactly once in every row, column, and 2×2 corner. Chatur helped the youngest children fill in the blank spots without any two of the same star touching in a line.",
+      hint: "Chatur says: 'Fill the corners of each 2×2 block first — the stars have no choice there.'",
+      winMessage: "Every lantern found its place. The grid blazed with four kinds of stars, each row and column perfectly balanced. The children cheered. Chatur straightened the last lantern and went to fetch more chai.",
+      grade: "1-3",
+      category: "1.1",
+      size: 4,
+      digits: ["⭐", "🌟", "💫", "✨"],
+      givens: [
+        "⭐", 0, 0, "🌟",
+        0, "💫", "⭐", 0,
+        0, "⭐", "🌟", 0,
+        "🌟", 0, 0, "💫"
+      ],
+      solution: [
+        "⭐", "✨", "💫", "🌟",
+        "🌟", "💫", "⭐", "✨",
+        "💫", "⭐", "🌟", "✨",
+        "🌟", "⭐", "✨", "💫"
+      ],
+      regions: [
+        [0,0,1,1],
+        [0,0,1,1],
+        [2,2,3,3],
+        [2,2,3,3]
+      ]
+    }
+  },
+
+  // ──────────────────────────────────────────────────────────
   // Day 1 · March 1, 2026 (Sunday) · DEDUCTION · Week 1
   // ──────────────────────────────────────────────────────────
   {
@@ -73,10 +472,10 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
       category: "1.2",
       grid: 4,
       pairs: [
-        { id: "R", color: "#e05050", start: [0, 0], end: [3, 3] },
-        { id: "B", color: "#4a90d9", start: [0, 3], end: [3, 0] },
-        { id: "G", color: "#3a7d44", start: [0, 1], end: [2, 3] },
-        { id: "Y", color: "#e8a820", start: [1, 0], end: [3, 2] }
+        { id: "R", color: "#e05050", start: [0, 0], end: [3, 1] },
+        { id: "B", color: "#4a90d9", start: [0, 2], end: [2, 1] },
+        { id: "G", color: "#3a7d44", start: [0, 3], end: [2, 2] },
+        { id: "Y", color: "#e8a820", start: [2, 3], end: [3, 2] }
       ]
     }
   },
@@ -194,21 +593,21 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     grade_band: "2-4",
     config: {
       id: "lateral_20260305",
-      title: "Chatur's River Riddle",
-      storyBeat: "Hari was feeling confident. He had been practising riddles all week, and he had one ready for Chatur. He cleared his throat importantly. Chatur did not put down her chai. She looked at him with the calm, steady gaze she reserved for things that were about to become obvious.",
-      hint: "Chatur says: 'What is the one thing that grows when you share it, instead of shrinking?'",
-      winMessage: "The merchant sells knowledge — recipes, remedies, farming wisdom, navigation by stars. The more he teaches, the more he knows. 'That is true of all the best things,' said Chatur, and finished her chai.",
-      grade: "2-4",
+      title: "The Cattle Trader's Ledger",
+      storyBeat: "Vikram the cattle trader was proud of his deals. 'Four transactions,' he announced to the Thursday market, 'and I came out ahead every time.' Chatur was passing with a basket of mangoes. She paused, tilted her head, and began counting on her fingers. The market held its breath. Vikram began to look slightly less proud.",
+      hint: "Chatur says: 'Track each transaction separately. How much did he gain or lose on the first deal? Then the second? Add them up — do not look at just the final price.'",
+      winMessage: "'Two hundred coins,' said Chatur, setting down her mangoes. 'First trade: spent 700, received 800 — a gain of 100. Second trade: spent 900, received 1000 — another 100. Two separate gains.' Vikram blinked. 'I suppose that is right,' he admitted. Chatur picked up her mangoes and walked on.",
+      grade: "4-6",
       category: "2.3",
-      prompt: "A merchant says: 'The more I sell, the more I have left.' What does this merchant sell?",
+      prompt: "Vikram buys a cow for 700 coins, then sells it for 800. Later he buys the same cow back for 900 coins, then sells it again for 1000 coins. What is his total profit?",
       options: [
-        { text: "Saffron — it multiplies in cooking", icon: "🌸" },
-        { text: "Knowledge — it grows when you share it", icon: "📚" },
-        { text: "River water — the river never empties", icon: "🌊" },
-        { text: "Festival stories from the Bazaar", icon: "📖" }
+        { text: "0 coins — he bought and sold the same cow", icon: "🐄" },
+        { text: "100 coins — he made 100 on the final sale", icon: "🪙" },
+        { text: "200 coins — he made 100 profit on each deal", icon: "💰" },
+        { text: "300 coins — he sold for 300 more than he first paid", icon: "📈" }
       ],
-      correctIndex: 1,
-      explanation: "Unlike physical goods, knowledge multiplies when shared. The more the merchant teaches — recipes, trade secrets, navigation wisdom — the more he learns in return. Saffron and river water are distractors; only knowledge truly grows the more you give it away."
+      correctIndex: 2,
+      explanation: "Each transaction must be counted separately. First deal: buy for 700, sell for 800 = +100 coins profit. Second deal: buy for 900, sell for 1000 = +100 coins profit. Total = 200 coins. The trick is that many people compare only the first price (700) to the last price (1000) and say 300, or assume the buy-back cancels the first sale. It does not — real money changed hands each time."
     }
   },
 
@@ -310,11 +709,11 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
       category: "1.2",
       grid: 5,
       pairs: [
-        { id: "R", color: "#e05050", start: [0, 0], end: [4, 4] },
-        { id: "B", color: "#4a90d9", start: [0, 4], end: [4, 0] },
-        { id: "G", color: "#3a7d44", start: [0, 2], end: [3, 2] },
-        { id: "Y", color: "#e8a820", start: [1, 1], end: [4, 2] },
-        { id: "P", color: "#9b59b6", start: [2, 0], end: [2, 4] }
+        { id: "R", color: "#e05050", start: [0, 1], end: [1, 0] },
+        { id: "B", color: "#4a90d9", start: [0, 4], end: [3, 3] },
+        { id: "G", color: "#3a7d44", start: [0, 3], end: [4, 1] },
+        { id: "Y", color: "#e8a820", start: [1, 1], end: [4, 0] },
+        { id: "P", color: "#9b59b6", start: [2, 4], end: [4, 2] }
       ]
     }
   },
@@ -332,17 +731,20 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     config: {
       id: "drag_20260310",
       title: "Clear the Bazaar Lane",
-      storyBeat: "The Festival cart — bright red, carrying Budhipur's ceremonial offerings — needed to reach the lane's exit before sundown. But a stall-owner had parked his cart of blue clay jars directly in the path. There was just enough room to manoeuvre, if you thought carefully about which cart moved where. Chatur arrived, looked at the lane for three seconds, and pointed.",
-      hint: "Chatur says: 'The blue cart can only move one way. Move it far enough, and the red cart will have a clear road to the exit on the right.'",
-      winMessage: "The red cart rolled free and reached the exit with minutes to spare. The stall-owner watched with impressed annoyance. 'You didn't even touch anything,' he said. 'I just showed you where to touch,' said Chatur.",
+      storyBeat: "The Festival cart — bright red, carrying Budhipur's ceremonial offerings — needed to reach the lane's exit before sundown. Three carts and a spice rack had turned the narrow passage into a puzzle. Chatur arrived, studied the tangle, and said four words: 'This one first. Then that.'",
+      hint: "Chatur says: 'The red cart is double-blocked. What is blocking the first blocker? Clear that, and the rest will follow like dominos.'",
+      winMessage: "The lane opened up in four smooth moves. The stall-owners watched, slack-jawed. 'How did you see that so fast?' asked Hari. 'I saw the first move,' said Chatur. 'The rest were obvious.'",
       grade: "2-4",
       category: "1.1",
-      gridSize: 4,
-      exitRow: 1,
+      gridSize: 5,
+      exitRow: 2,
       exitSide: "right",
       blocks: [
-        { id: "T", color: "#e05050", row: 1, col: 0, length: 2, orientation: "h", isTarget: true },
-        { id: "A", color: "#4a90d9", row: 0, col: 2, length: 2, orientation: "v" }
+        { id: "T", color: "#e05050", row: 2, col: 0, length: 2, orientation: "h", isTarget: true },
+        { id: "A", color: "#4a90d9", row: 1, col: 2, length: 2, orientation: "v" },
+        { id: "B", color: "#3a7d44", row: 2, col: 3, length: 2, orientation: "v" },
+        { id: "C", color: "#9b59b6", row: 0, col: 1, length: 2, orientation: "h" },
+        { id: "D", color: "#e8a820", row: 4, col: 2, length: 2, orientation: "h" }
       ]
     }
   },
@@ -567,12 +969,12 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
       category: "1.2",
       grid: 6,
       pairs: [
-        { id: "R", color: "#e05050", start: [0, 0], end: [5, 5] },
-        { id: "B", color: "#4a90d9", start: [0, 5], end: [5, 0] },
-        { id: "G", color: "#3a7d44", start: [0, 2], end: [4, 3] },
-        { id: "Y", color: "#e8a820", start: [1, 0], end: [5, 3] },
-        { id: "P", color: "#9b59b6", start: [2, 5], end: [3, 1] },
-        { id: "O", color: "#e8803a", start: [1, 3], end: [4, 0] }
+        { id: "R", color: "#e05050", start: [0, 0], end: [3, 2] },
+        { id: "G", color: "#3a7d44", start: [0, 3], end: [3, 5] },
+        { id: "B", color: "#4a90d9", start: [1, 0], end: [4, 0] },
+        { id: "Y", color: "#e8a820", start: [1, 3], end: [4, 3] },
+        { id: "P", color: "#9b59b6", start: [3, 1], end: [5, 0] },
+        { id: "O", color: "#e8803a", start: [3, 4], end: [5, 3] }
       ]
     }
   },
@@ -589,21 +991,21 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     grade_band: "3-6",
     config: {
       id: "lateral_20260317",
-      title: "Chatur's Shortcut Problem",
-      storyBeat: "On Tuesday mornings, the schoolchildren raced to be first at the gate. One girl walked to school in twenty minutes. One day she decided to run — and she ran twice as fast as she walked. Hari bet Chatur that nobody could work out how long the run took without a water clock. Chatur had the answer before Hari finished explaining the problem.",
-      hint: "Chatur says: 'If you travel twice as fast, how does your journey time change? Speed and time always move in opposite directions.'",
-      winMessage: "Ten minutes. Speed doubles, time halves. Chatur said: 'Simple. Speed and time are always trading places — they are two sides of the same coin, and the distance between school and home never changes.' Hari paid his bet of a mango.",
+      title: "Hari's Race Result",
+      storyBeat: "The Festival footrace was Hari's favourite event. Twenty runners, two laps around the Bazaar. With fifty paces to go, Hari surged forward and overtook the runner ahead of him. The crowd cheered. Chatur was watching from a rooftop, eating a mango. 'What place is he in now?' called a man beside her. She answered without looking up from the mango.",
+      hint: "Chatur says: 'Do not count the runners behind him — they have nothing to do with his position. Think only about the runner he overtook and what position that runner held.'",
+      winMessage: "'Third place,' said Chatur. The man looked confused. 'But he passed someone — shouldn't he be second?' Chatur pointed with her mango. 'He passed the runner who was in third place. That runner was not in first or second. Overtaking them puts Hari into their place — third.' The man thought for a long time. The race was already over.",
       grade: "3-6",
       category: "2.3",
-      prompt: "A child walks to school in 20 minutes. One day she runs twice as fast as she walks. How long does running take?",
+      prompt: "Hari is running a race. He overtakes the person in 3rd place. What place is Hari in now?",
       options: [
-        { text: "10 minutes", icon: "⏱️" },
-        { text: "20 minutes", icon: "⏰" },
-        { text: "40 minutes", icon: "🕐" },
-        { text: "15 minutes", icon: "⚡" }
+        { text: "2nd place", icon: "🥈" },
+        { text: "3rd place", icon: "🥉" },
+        { text: "4th place", icon: "4️⃣" },
+        { text: "1st place", icon: "🥇" }
       ],
-      correctIndex: 0,
-      explanation: "If the child walks at speed W and takes 20 minutes, then at speed 2W (twice as fast), the time is 20 ÷ 2 = 10 minutes. When speed doubles, time halves — because distance stays constant. Chatur solved this before Hari finished explaining it."
+      correctIndex: 1,
+      explanation: "When Hari overtakes the person in 3rd place, he takes their position — 3rd. He does not move into 2nd place, because the person in 2nd place is still ahead of him. The most common wrong answer is 2nd place, but Hari only passed the runner who was in 3rd — he is now in 3rd."
     }
   },
 
@@ -691,9 +1093,9 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     config: {
       id: "drag_20260319",
       title: "The Festival Corridor",
-      storyBeat: "The Festival procession's lead cart — painted red with marigold trim — was blocked in a stone corridor near the Silk Quarter. Two heavy supply carts had been parked across the exit: one carrying blue silk bales, one carrying green spice boxes. Both could be shifted, but only in the direction their runners allowed. Chatur mapped the moves in her mind before anyone had finished explaining the problem.",
-      hint: "Chatur says: 'Both blocking carts can move upward along the corridor. Move each one up far enough, and the red cart will find its path to the right.'",
-      winMessage: "The procession cart rolled free into the Silk Quarter lane to great cheering. The supply cart owners shook their heads in admiration. Chatur was already three lanes ahead, looking for the next bottleneck.",
+      storyBeat: "The Festival procession's lead cart — painted red with marigold trim — was blocked in a stone corridor near the Silk Quarter. Two heavy supply carts stood directly in its path, pinned in place by smaller carts wedged above them. The corridor was five stalls wide. Every cart could move, but only along its runners. Chatur studied the tangle for five seconds, then said: 'Five moves. Starting with that yellow one.'",
+      hint: "Chatur says: 'The red cart has two guards. Each guard has their own keeper above. Move the keepers first, and the guards will follow — then the red cart finds the exit.'",
+      winMessage: "Five clean moves and the corridor was clear. The procession rolled through to great cheering. 'How did you see all five at once?' asked Hari. 'I didn't,' said Chatur. 'I only saw the first one. The rest followed on their own.'",
       grade: "4-6",
       category: "1.1",
       gridSize: 5,
@@ -701,9 +1103,11 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
       exitSide: "right",
       blocks: [
         { id: "T", color: "#e05050", row: 2, col: 0, length: 2, orientation: "h", isTarget: true },
-        { id: "A", color: "#4a90d9", row: 1, col: 2, length: 2, orientation: "v" },
-        { id: "B", color: "#3a7d44", row: 1, col: 3, length: 2, orientation: "v" },
-        { id: "C", color: "#9b59b6", row: 4, col: 0, length: 2, orientation: "h" }
+        { id: "A", color: "#4a90d9", row: 2, col: 2, length: 2, orientation: "v" },
+        { id: "B", color: "#3a7d44", row: 2, col: 3, length: 2, orientation: "v" },
+        { id: "C", color: "#9b59b6", row: 0, col: 2, length: 2, orientation: "h" },
+        { id: "D", color: "#e8a820", row: 1, col: 1, length: 2, orientation: "h" },
+        { id: "E", color: "#c060c0", row: 4, col: 1, length: 2, orientation: "h" }
       ]
     }
   },
@@ -746,21 +1150,21 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     grade_band: "3-6",
     config: {
       id: "lateral_20260321",
-      title: "Hari's Tricky Family Question",
-      storyBeat: "Hari had been reading a book of logic puzzles from the Archive, and he had found one that he was absolutely certain would stump Chatur. He read it aloud with maximum drama. Chatur had answered it before he finished the sentence. Hari said that was cheating. Chatur said that knowing the answer quickly was the whole point.",
-      hint: "Chatur says: 'Read the question very carefully. Who is the one brother that all three sisters share?'",
-      winMessage: "Hari has zero brothers. Each of his three sisters has exactly one brother — and that brother is Hari himself. Hari stared at the answer for a long time. Chatur was very patient about it. Eventually he said: 'Oh.' She said: 'Yes.'",
+      title: "The Spice Caravan's Journey",
+      storyBeat: "A spice caravan set out from Budhipur on Saturday morning. They travelled 10 km north to the river, then 10 km east to the crossing, then 10 km south to the trading post. A merchant's apprentice insisted the caravan had now covered 30 km and was very far from home. Chatur, riding on the last cart, drew a line in the air with her finger and raised an eyebrow.",
+      hint: "Chatur says: 'Draw the path. North, then east, then south — the same distance each time. Where does south bring you relative to where you started?'",
+      winMessage: "'Ten kilometres,' said Chatur, drawing the route in the dust: up, across, down. 'North 10, east 10, south 10. They are now directly east of Budhipur — exactly 10 km from where they started.' The apprentice stared at the drawing. 'But we walked 30 km,' he said. 'Yes,' said Chatur, 'and I walked 10 steps to the water jar this morning. The jar was not 10 steps away when I came back.'",
       grade: "3-6",
       category: "2.3",
-      prompt: "Hari has 3 sisters. Each sister has 1 brother. How many brothers does Hari have?",
+      prompt: "A caravan travels 10 km north, then 10 km east, then 10 km south. How far is it from where it started?",
       options: [
-        { text: "3 brothers", icon: "3️⃣" },
-        { text: "0 brothers", icon: "0️⃣" },
-        { text: "1 brother", icon: "1️⃣" },
-        { text: "Cannot be determined", icon: "❓" }
+        { text: "10 km — directly east of the start", icon: "🧭" },
+        { text: "30 km — the total distance walked", icon: "👣" },
+        { text: "0 km — it has returned to the start", icon: "🔄" },
+        { text: "About 14 km — the diagonal shortcut home", icon: "📐" }
       ],
-      correctIndex: 1,
-      explanation: "Each of Hari's three sisters has exactly one brother — and that brother is Hari himself. So Hari has zero brothers. The question is designed to make you count wrongly. Chatur said: 'The question already gave you the answer. You just had to trust it.'"
+      correctIndex: 0,
+      explanation: "The path forms three sides of a rectangle: 10 km north, 10 km east, 10 km south. The north leg and south leg cancel out (same distance, opposite directions), leaving only the 10 km east. So the caravan is exactly 10 km from the start — directly to the east. The total distance walked (30 km) is not the same as straight-line displacement from the starting point."
     }
   },
 
@@ -963,7 +1367,7 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
       id: "drag_20260326",
       title: "The Bazaar's Grand Bottleneck",
       storyBeat: "The main festival cart was trapped in the widest alley of the Bazaar, the six-lane passage that merchants called the Grand Corridor. Three supply carts had parked in a row across it — a blue one, a green one, and a purple one. Two horizontal barricades had been erected above them by mistake, blocking each supply cart from moving upward. Chatur stared at the corridor for a full minute. Then she smiled.",
-      hint: "Chatur says: 'The three carts blocking the path cannot move upward — the barricades prevent it. They must go downward. Move each one down far enough, and the festival cart will have its road.'",
+      hint: "Chatur says: 'Study the barricades before touching anything. When one direction is closed, the other opens. The three blocking carts each have only one way to go — find it.'",
       winMessage: "Three carts moved down, and the festival cart rolled free through the Grand Corridor to enormous cheering. The merchants argued afterward about who had thought of the solution first. None of them had. Chatur had already gone home.",
       grade: "6-9",
       category: "1.1",

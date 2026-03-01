@@ -47,9 +47,9 @@ export interface DeductionPuzzleConfig extends BasePuzzleConfig {
 // E4 — Sudoku
 export interface SudokuPuzzleConfig extends BasePuzzleConfig {
   size: number;
-  digits: number[];
-  givens: number[];
-  solution: number[];
+  digits: (number | string)[];
+  givens: (number | string)[];
+  solution: (number | string)[];
   regions: number[][];
 }
 
