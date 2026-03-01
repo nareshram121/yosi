@@ -21,10 +21,10 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     grade_band: "1-3",
     config: {
       id: "deduction_20260219",
-      title: "Mystery: The Broken Drum",
-      storyBeat: "The night before Holi, Budhipur's great festival drum was found cracked in the courtyard — someone had left it in the rain. Two children were seen near the courtyard after dark: Leela and Dev. Chatur arrived at sunrise with her notebook and studied the muddy footprints.",
-      hint: "Chatur whispers: 'One clue tells you who was nowhere near the drum. The other tells you exactly where it was left.'",
-      winMessage: "Dev admitted he had dragged the drum under the mango tree — meaning well, thinking the leaves would shelter it. The rain came sideways that night. Chatur patted his shoulder. 'Good intention, bad geometry.'",
+      title: "Mystery: The Stolen Clapper",
+      storyBeat: "The temple bell rang hollow at dawn — its iron clapper was missing. Old Gupta the bell-keeper stood wringing his hands as Chatur arrived. Two figures had been near the temple that morning. 'Two suspects, two places,' said Chatur, opening her notebook. 'Let us sort this quickly.'",
+      hint: "Chatur says: 'One clue tells you exactly where one person was standing. The other clue tells you where the clapper was last heard. Put them together and one answer remains.'",
+      winMessage: "The clapper was found tucked in a sack at the Old Granary — Vikram admitted he had borrowed it to test its tone for the Festival. Chatur marked her notebook: 'Curiosity, not malice.'",
       grade: "1-3",
       category: "2.1",
       categories: [
@@ -32,24 +32,24 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
           name: "Suspect",
           icon: "🧑",
           items: [
-            { name: "Leela", icon: "👧" },
-            { name: "Dev", icon: "👦" }
+            { name: "Vikram", icon: "👨" },
+            { name: "Sona", icon: "👩" }
           ]
         },
         {
           name: "Location",
           icon: "📍",
           items: [
-            { name: "Mango Tree", icon: "🌳" },
-            { name: "Temple Steps", icon: "🛕" }
+            { name: "Old Granary", icon: "🏚️" },
+            { name: "Clock Tower", icon: "🕰️" }
           ]
         }
       ],
       clues: [
-        { id: 1, text: "Leela was inside helping her mother string marigold garlands all evening — she never went to the courtyard." },
-        { id: 2, text: "The drum's cracked side was caked with mango-leaf stain, not temple-stone dust." }
+        { id: 1, text: "Sona was seen drawing water at the well beside the Clock Tower at the very time the clapper went missing — witnesses confirm she never left that spot." },
+        { id: 2, text: "The temple bell was heard ringing faintly, with a dull clunk, from inside the Old Granary just before dawn." }
       ],
-      solution: { "Suspect": "Dev", "Location": "Mango Tree" }
+      solution: { "Suspect": "Vikram", "Location": "Old Granary" }
     }
   },
 
@@ -62,24 +62,24 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     engine_type: "lateral",
     day_of_week: 5,
     week_number: 0,
-    grade_band: "4-6",
+    grade_band: "5-8",
     config: {
       id: "lateral_20260220",
-      title: "The River That Remembers",
-      storyBeat: "An old ferryman had crossed the river every day for forty years. One morning a traveller asked: 'Have you crossed the same river twice?' The ferryman smiled and said nothing. Chatur, sitting on a bale of hay, answered for him.",
-      hint: "Chatur says: 'Think about what a river actually is. Is it the water — or the channel?'",
-      winMessage: "Chatur nodded. 'The water flows on; the river bed stays. He crosses the same river — with different water. The channel remembers even when the water forgets.'",
-      grade: "4-6",
+      title: "The Stone and the River",
+      storyBeat: "Hari sat on the ferry with a large iron stone in his lap, watching the river. 'What happens,' asked Chatur, 'if that stone slips overboard and sinks to the bottom? The ferry is still floating. Does the river level rise, fall, or stay the same?' Hari shrugged. Chatur smiled and waited.",
+      hint: "Chatur says: 'A floating boat displaces water equal to its weight. A sunken stone displaces water equal to its volume only. Iron is very heavy for its size — much heavier than an equal volume of water.'",
+      winMessage: "'The river level falls!' said Hari. 'The stone pushes less water aside when it is sunken than when it was weighing down the boat!' Chatur nodded. 'Now you are thinking like the river.'",
+      grade: "5-8",
       category: "3.2",
-      prompt: "A ferryman has crossed the same river every day for 40 years. A traveller asks: 'Have you crossed the same river twice?' What is the most thoughtful answer?",
+      prompt: "A clay ferry boat carries a large iron stone. The stone slips overboard and sinks to the riverbed. The boat is still floating. Compared to when the stone was in the boat — what happens to the river level?",
       options: [
-        { text: "No — the water changes every moment, so it is never the same river", icon: "🌊" },
-        { text: "Yes — the river bed and name stay the same, so it is the same river", icon: "🏞️" },
-        { text: "Both — the channel persists but the water is always new", icon: "⚖️" },
-        { text: "It doesn't matter — a river is just a river", icon: "🤷" }
+        { text: "Rises — the sunken stone still pushes water upward from below", icon: "📈" },
+        { text: "Falls — the submerged stone displaces less water than it did when it was weighing down the boat", icon: "📉" },
+        { text: "Stays the same — the stone's total weight has not changed", icon: "➡️" },
+        { text: "Cannot tell without knowing the exact size of the stone", icon: "❓" }
       ],
-      correctIndex: 2,
-      explanation: "The river is both: the physical channel, name, and bed persist (making it 'the same'), but the water is perpetually new. Heraclitus said you cannot step into the same river twice — but the ferryman's route remains. Both answers have truth; the deepest answer holds both at once."
+      correctIndex: 1,
+      explanation: "When the stone was in the boat, the boat displaced water equal to the combined weight of boat and stone. Once the stone sinks, it only displaces water equal to its own volume. Because iron is far denser than water, its volume is much smaller than the equivalent weight of water — so total water displaced drops, and the river level falls."
     }
   },
 
@@ -92,41 +92,20 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     engine_type: "sudoku",
     day_of_week: 6,
     week_number: 0,
-    grade_band: "3-5",
+    grade_band: "4-7",
     config: {
       id: "sudoku_20260221",
-      title: "The Courtyard Grid",
-      storyBeat: "The potters of Budhipur arranged their freshly-fired tiles in a six-by-six grid to dry in the courtyard sun. Each row, each column, and each 2×3 section had to hold exactly one tile of each of the six clay colours — otherwise the kiln-master would know something had been switched.",
-      hint: "Chatur says: 'Fill in what the clues fix first; the rest will follow like water finding its level.'",
-      winMessage: "The tiles dried perfectly, each colour appearing exactly once in every row, column, and block. The kiln-master said it was the best layout in a decade. Chatur had already wandered off.",
-      grade: "3-5",
-      category: "1.1",
+      title: "The Archive's Six Great Shelves",
+      storyBeat: "The Archivist had six kinds of scrolls and six shelves — six rows, six columns, six tidy blocks. 'Every kind of scroll,' he told young Hari, 'appears exactly once in each row, each column, and each block of six. Not a single scroll is ever doubled. Order, above all things.'",
+      hint: "Chatur says: 'Work the 2×3 blocks first — they give you the most constraints at once. Find a block where five kinds are already placed and the sixth writes itself in.'",
+      winMessage: "Hari placed the last scroll perfectly. The Archivist ran his finger along every row and column without a word. Then: 'Correct.' That was considered high praise.",
+      grade: "4-7",
+      category: "2.4",
       size: 6,
       digits: [1, 2, 3, 4, 5, 6],
-      givens: [
-        1, 0, 0, 0, 5, 0,
-        0, 5, 0, 1, 0, 3,
-        0, 0, 2, 0, 0, 0,
-        0, 0, 0, 5, 0, 0,
-        4, 0, 1, 0, 3, 0,
-        0, 2, 0, 0, 0, 4
-      ],
-      solution: [
-        1, 3, 4, 2, 5, 6,
-        2, 5, 6, 1, 4, 3,
-        6, 4, 2, 3, 1, 5,
-        3, 1, 5, 4, 6, 2,
-        4, 6, 1, 5, 2, 3,   // wait, let me recalculate -- actually trust the pre-built solution
-        5, 2, 3, 6, 1, 4
-      ],
-      regions: [
-        [0,0,0,1,1,1],
-        [0,0,0,1,1,1],
-        [2,2,2,3,3,3],
-        [2,2,2,3,3,3],
-        [4,4,4,5,5,5],
-        [4,4,4,5,5,5]
-      ]
+      givens: [1,0,3,0,5,6, 0,5,0,1,0,3, 2,0,0,5,6,0, 0,6,4,0,3,0, 3,0,2,0,0,5, 0,4,0,3,0,2],
+      solution: [1,2,3,4,5,6, 4,5,6,1,2,3, 2,3,1,5,6,4, 5,6,4,2,3,1, 3,1,2,6,4,5, 6,4,5,3,1,2],
+      regions: [[0,1,2,6,7,8],[3,4,5,9,10,11],[12,13,14,18,19,20],[15,16,17,21,22,23],[24,25,26,30,31,32],[27,28,29,33,34,35]]
     }
   },
 
@@ -139,19 +118,19 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     engine_type: "word",
     day_of_week: 0,
     week_number: 0,
-    grade_band: "2-4",
+    grade_band: "4-7",
     config: {
       id: "word_20260222",
-      title: "From Rain to Dust",
-      storyBeat: "Chatur traced a path in her notebook: words that melted into each other one letter at a time, the way monsoon puddles slowly become dry earth by January. 'Change one letter at a time,' she told Hari. 'Start at rain and end at dust. Every step must be a real word.'",
-      hint: "Chatur says: 'Four letters, four steps. Some paths go through RUIN or RUST — see which road opens up.'",
-      winMessage: "RAIN→RUIN→RUIN... Chatur's chalk path was short and clean. 'The lane between storm and drought,' she said, 'is only four words wide.'",
-      grade: "2-4",
-      category: "5.1",
+      title: "Chatur's Word Path",
+      storyBeat: "'Words are like river stones,' Chatur told Hari, placing two pebbles on the step — one for BAKE, one for LATE. 'Change one letter at a time and you can walk from any word to any other — if you know the path.' She looked at him. 'Six steps. No leaps.'",
+      hint: "Chatur says: 'Try changing the last letter of BAKE first. Think of 4-letter words that differ by only one letter. Work one step at a time — every word must be real.'",
+      winMessage: "BAKE → BARE → CARE → CAME → GAME → GATE → LATE. Hari traced the path with his finger. 'Seven stepping stones,' he said, 'and never once a leap.' Chatur smiled and pocketed her pebbles.",
+      grade: "4-7",
+      category: "3.1",
       mode: "word-ladder",
-      startWord: "RAIN",
-      endWord: "DUST",
-      validPath: ["RAIN", "RUIN", "RUIN", "RUST", "DUST"],
+      startWord: "BAKE",
+      endWord: "LATE",
+      validPath: ["BARE", "CARE", "CAME", "GAME", "GATE"],
       wordLength: 4
     }
   },
@@ -165,24 +144,24 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     engine_type: "lateral",
     day_of_week: 1,
     week_number: 0,
-    grade_band: "3-5",
+    grade_band: "4-8",
     config: {
       id: "lateral_20260223",
-      title: "The Merchant Who Sold Nothing",
-      storyBeat: "A merchant set up his stall in the Bazaar every day for a year. He sold nothing — no cloth, no spice, no grain. Yet at the end of the year he was richer than when he began. No one stole from him. He broke no laws. Chatur heard the riddle from Old Mehta and answered it before the chai had cooled.",
-      hint: "Chatur says: 'What does a merchant need before he sells anything at all? What does land itself provide?'",
-      winMessage: "Chatur smiled. 'He rented the stall space to other merchants each day, earning from the spot itself — not from goods.' Old Mehta nodded slowly. 'The ground,' he said, 'is its own kind of stock.'",
-      grade: "3-5",
-      category: "3.1",
-      prompt: "A merchant ran a stall in the Bazaar every day for a year and sold absolutely nothing — yet became richer. He was honest and broke no laws. How did he earn money?",
+      title: "Weights of the Spice Market",
+      storyBeat: "The spice merchant set three coconuts on one side of his balance scale and six bananas on the other. The scale levelled perfectly. He then took one coconut aside and placed two bananas in its place, and balanced the whole thing against a single pumpkin. The scale levelled again. Chatur turned to Hari. 'How many bananas weigh as much as one pumpkin?'",
+      hint: "Chatur says: 'First find out how much one coconut weighs in bananas. Then use the second equation to find the pumpkin.'",
+      winMessage: "'Four bananas!' said Hari. Chatur nodded. 'Three coconuts equal six bananas, so one coconut equals two bananas. One coconut plus two bananas is two plus two — four bananas. The pumpkin tips at exactly four.' The merchant looked genuinely impressed.",
+      grade: "4-8",
+      category: "3.3",
+      prompt: "At the market stall: 3 coconuts balance exactly with 6 bananas. Then: 1 coconut and 2 bananas together balance exactly with 1 pumpkin. How many bananas weigh the same as 1 pumpkin?",
       options: [
-        { text: "He charged other merchants rent to use the stall space each day", icon: "🏪" },
-        { text: "He found treasure buried beneath the stall floor", icon: "💎" },
-        { text: "A relative secretly deposited money for him each night", icon: "🌙" },
-        { text: "He performed work elsewhere after closing the stall each evening", icon: "🔨" }
+        { text: "2 bananas", icon: "🍌" },
+        { text: "3 bananas", icon: "🍌🍌" },
+        { text: "4 bananas", icon: "🍌🍌🍌" },
+        { text: "8 bananas", icon: "🍌🍌🍌🍌" }
       ],
-      correctIndex: 0,
-      explanation: "The merchant's stall was a location, and location itself has value. By sub-letting the spot daily, he earned income without trading any goods. This is the principle behind rent and land value — wealth from place, not from product."
+      correctIndex: 2,
+      explanation: "Since 3 coconuts = 6 bananas, dividing both sides by 3 gives: 1 coconut = 2 bananas. Substitute into the second equation: 1 pumpkin = 1 coconut + 2 bananas = 2 bananas + 2 bananas = 4 bananas."
     }
   },
 
@@ -195,24 +174,25 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     engine_type: "visual",
     day_of_week: 2,
     week_number: 0,
-    grade_band: "1-3",
+    grade_band: "2-5",
     config: {
       id: "visual_20260224",
-      title: "Vessels of Budhipur",
-      storyBeat: "Chatur's aunt arranged four vessels on the kitchen shelf and looked at her niece expectantly. Three of them were used daily in the same kind of task. One had crept onto the shelf by mistake — it belonged somewhere else entirely. Chatur spotted it before her aunt could blink.",
-      hint: "Chatur says: 'Think about what each vessel is made to hold — and where that substance comes from.'",
-      winMessage: "Chatur pointed at the oil lamp. 'That one holds oil for light, not for cooking or carrying water. It belongs on the prayer shelf, not here.' Her aunt laughed and moved it immediately.",
-      grade: "1-3",
-      category: "4.3",
+      title: "What Sinks in the River?",
+      storyBeat: "Chatur lined up five things on the edge of the ghat. 'Four of these belong together,' she said. 'One does not. Which one would sink straight to the riverbed — and why does everything else float?'",
+      hint: "Chatur says: 'Think about density — whether the object is lighter or heavier than the water it would push aside if you dropped it in.'",
+      winMessage: "'The iron anchor!' said Hari. Chatur tossed a dry leaf onto the current and watched it drift downstream. 'The river keeps its secrets at the bottom,' she said, 'and everything else at the surface.'",
+      grade: "2-5",
+      category: "3.2",
       mode: "odd-one-out",
       items: [
-        { text: "Water Pot", icon: "🏺" },
-        { text: "Cooking Vessel", icon: "🫕" },
-        { text: "Oil Lamp", icon: "🪔" },
-        { text: "Clay Cup", icon: "🥛" }
+        { text: "Lotus Leaf", icon: "🪷" },
+        { text: "Coconut Shell", icon: "🥥" },
+        { text: "Iron Anchor", icon: "⚓" },
+        { text: "Dry Gourd", icon: "🎃" },
+        { text: "Wooden Plank", icon: "🪵" }
       ],
       correctIndex: 2,
-      explanation: "The Water Pot, Cooking Vessel, and Clay Cup are all kitchen vessels used for food and drink. The Oil Lamp holds oil for burning — it is a light source, not a kitchen container. It belongs on the prayer shelf."
+      explanation: "A lotus leaf, coconut shell, dry gourd, and wooden plank all float because they are less dense than water (or trap air). An iron anchor is far denser than water — it sinks straight to the riverbed the moment it enters the water."
     }
   },
 
@@ -225,62 +205,62 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     engine_type: "connections",
     day_of_week: 3,
     week_number: 0,
-    grade_band: "3-5",
+    grade_band: "5-8",
     config: {
       id: "connections_20260225",
-      title: "Things That Flow",
-      storyBeat: "Chatur sat by the river and listed everything in Budhipur that moved without legs. 'The river flows,' she said, 'but so does gossip, and money, and the monsoon wind.' She began sorting them into families — not by what they were, but by how they moved.",
-      hint: "Chatur says: 'Sort by what each thing flows *through* or *as* — water, air, trade, or time.'",
-      winMessage: "Hari stared at the sorted groups. 'You've turned the whole Bazaar into a river,' he said. Chatur shrugged. 'Everything flows. We just give it different names.'",
-      grade: "3-5",
+      title: "Chatur Sorts the Lane",
+      storyBeat: "Chatur tipped sixteen small objects onto the courtyard floor. 'Four groups of four,' she told Hari. 'Three groups have clear trades or materials. But the fourth — even I had to think twice.' She stepped back and waited.",
+      hint: "Chatur says: 'Three groups sort themselves by craft or material. The fourth group shares something you cannot see or touch. Look for a hidden word that connects all four objects.'",
+      winMessage: "Hari sorted the first three groups in minutes. The fourth stopped him. 'They all have an eye!' he said at last — the needle's eye, the eye of a storm, a potato's eye-bud, the eye-spot on a peacock feather. Chatur applauded, once, slowly.",
+      grade: "5-8",
       category: "4.3",
       groups: [
         {
           id: "g1",
-          color: "#4a90d9",
-          label: "Things that flow as water",
-          connection: "All move through channels or vessels as liquid",
+          color: "#3a7d44",
+          label: "Used by the water-carrier",
+          connection: "All are carried or used by Budhipur's water-carriers on their daily rounds",
           tiles: [
-            { text: "River", icon: "🌊" },
-            { text: "Rain", icon: "🌧️" },
-            { text: "Flood", icon: "💧" },
-            { text: "Spring", icon: "⛲" }
+            { text: "Clay Pot", icon: "🏺" },
+            { text: "Copper Vessel", icon: "🪣" },
+            { text: "Bamboo Yoke", icon: "🎋" },
+            { text: "Hemp Rope", icon: "🪢" }
           ]
         },
         {
           id: "g2",
-          color: "#e8a820",
-          label: "Things that flow as trade",
-          connection: "All move through markets or hands as commerce",
+          color: "#4a90d9",
+          label: "Used to write or inscribe",
+          connection: "All are tools used to write or engrave records in the Budhipur Archive",
           tiles: [
-            { text: "Coin", icon: "🪙" },
-            { text: "Spice", icon: "🫙" },
-            { text: "Cloth", icon: "🧵" },
-            { text: "Grain", icon: "🌾" }
+            { text: "Reed Pen", icon: "✒️" },
+            { text: "Inkpot", icon: "🖋️" },
+            { text: "Copper Plate", icon: "🥉" },
+            { text: "Clay Tablet", icon: "🪨" }
           ]
         },
         {
           id: "g3",
-          color: "#3a7d44",
-          label: "Things that flow as air",
-          connection: "All move invisibly through the atmosphere",
+          color: "#e8a820",
+          label: "Seeds from the spice market",
+          connection: "All are seeds traded at the Budhipur spice quarter",
           tiles: [
-            { text: "Wind", icon: "💨" },
-            { text: "Scent", icon: "🌸" },
-            { text: "Smoke", icon: "🌫️" },
-            { text: "Song", icon: "🎵" }
+            { text: "Mustard", icon: "🌱" },
+            { text: "Cumin", icon: "🌿" },
+            { text: "Fenugreek", icon: "🫘" },
+            { text: "Sesame", icon: "⚪" }
           ]
         },
         {
           id: "g4",
-          color: "#9b59b6",
-          label: "Things that flow as time",
-          connection: "All describe the passage or experience of time",
+          color: "#c060c0",
+          label: "All have an EYE",
+          connection: "All share a hidden 'eye': the needle's eye, the eye of a storm, a potato's eye-bud, and the eye-spot on a peacock feather",
           tiles: [
-            { text: "Season", icon: "🍂" },
-            { text: "Year", icon: "📅" },
-            { text: "Dawn", icon: "🌅" },
-            { text: "Memory", icon: "🧠" }
+            { text: "Needle", icon: "🪡" },
+            { text: "Storm", icon: "🌀" },
+            { text: "Potato", icon: "🥔" },
+            { text: "Peacock Feather", icon: "🦚" }
           ]
         }
       ]
@@ -296,44 +276,44 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     engine_type: "deduction",
     day_of_week: 4,
     week_number: 0,
-    grade_band: "3-5",
+    grade_band: "5-8",
     config: {
       id: "deduction_20260226",
-      title: "The Missing Scroll",
-      storyBeat: "The Budhipur Archive stored four ancient scrolls in four towers — the Bell Tower, the River Tower, the East Tower, and the West Tower. One scroll disappeared overnight. Four scholars — Arjun, Bela, Chandan, and Diya — each had access to one tower only. Chatur studied the records and found the answer before the archive master had finished his morning tea.",
-      hint: "Chatur says: 'Use the clues to eliminate who could NOT have taken each scroll. The one left standing is your answer.'",
-      winMessage: "Arjun's key only opened the Bell Tower — and that was where the missing scroll had been kept. He admitted he had borrowed it to make a copy and forgotten to return it. Chatur handed it back without comment.",
-      grade: "3-5",
+      title: "Mystery: The Night of the Missing Lanterns",
+      storyBeat: "Four lanterns were stolen from four corners of Budhipur on the same night — the Bell Tower, the Cellar of the old inn, the River Steps, and the Rooftop of the dyers' quarter. Four suspects were out that night. Chatur arrived at first light, notebook in hand. 'One clue at a time,' she said. 'And the lane reveals everything.'",
+      hint: "Chatur says: 'Start with the clues that place someone definitively — heights, water, echoes each name a location. Once three suspects are placed, the fourth follows by elimination.'",
+      winMessage: "Arjun at the Bell Tower. Mira in the Cellar. Devesh at the River Steps. Sona on the Rooftop. 'How?' asked the inspector. 'Clues,' said Chatur. 'And the smell of river mud on Devesh's sandals.'",
+      grade: "5-8",
       category: "2.1",
       categories: [
         {
-          name: "Scholar",
-          icon: "📚",
+          name: "Suspect",
+          icon: "🧑",
           items: [
-            { name: "Arjun", icon: "🧑‍🎓" },
-            { name: "Bela", icon: "👩‍🎓" },
-            { name: "Chandan", icon: "🧑" },
-            { name: "Diya", icon: "👩" }
+            { name: "Arjun", icon: "👦" },
+            { name: "Mira", icon: "👩" },
+            { name: "Devesh", icon: "🧔" },
+            { name: "Sona", icon: "👧" }
           ]
         },
         {
-          name: "Tower",
-          icon: "🗼",
+          name: "Location",
+          icon: "📍",
           items: [
             { name: "Bell Tower", icon: "🔔" },
-            { name: "River Tower", icon: "🌊" },
-            { name: "East Tower", icon: "🌅" },
-            { name: "West Tower", icon: "🌇" }
+            { name: "Cellar", icon: "🏚️" },
+            { name: "River Steps", icon: "🌊" },
+            { name: "Rooftop", icon: "🏠" }
           ]
         }
       ],
       clues: [
-        { id: 1, text: "Bela's key opens only the River Tower — she never went near the Bell Tower." },
-        { id: 2, text: "Chandan was in the East Tower all evening cataloguing star charts." },
-        { id: 3, text: "Diya was locked out of the archive entirely — her key malfunctioned at the West Tower gate." },
-        { id: 4, text: "The missing scroll was kept in the Bell Tower." }
+        { id: 1, text: "Sona was spotted from the market square, her silhouette clearly visible against the stars — she was at the highest point in the lane that night." },
+        { id: 2, text: "Mira's voice drifted up through the stone flags, low and echoing — she was in a deeply enclosed underground space, not outdoors or elevated." },
+        { id: 3, text: "Devesh's sandals were thick with river mud when he was found the next morning — he had been near the water all night, nowhere else." },
+        { id: 4, text: "The Bell Tower lantern was taken by the one suspect not yet placed by clues 1 through 3." }
       ],
-      solution: { "Scholar": "Arjun", "Tower": "Bell Tower" }
+      solution: { "Suspect": "Arjun", "Location": "Bell Tower" }
     }
   },
 
@@ -346,24 +326,24 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     engine_type: "lateral",
     day_of_week: 5,
     week_number: 0,
-    grade_band: "5-7",
+    grade_band: "5-9",
     config: {
       id: "lateral_20260227",
       title: "The Nine Scrolls",
-      storyBeat: "The Archive master showed Chatur nine scrolls, one of which was slightly heavier — it contained a hidden stone tablet. She had only a balance scale with no weights, and could use it at most twice. She found the heavy scroll in two weighings without fail.",
-      hint: "Chatur says: 'Don't weigh them one-against-one. Think in groups — let the scale tell you which *third* to search next.'",
-      winMessage: "Chatur split the scrolls into three groups of three. One weighing told her which group held the heavy one. A second weighing among those three found it. 'Two weighings,' she said, 'is all you ever need for nine.'",
-      grade: "5-7",
+      storyBeat: "The Archivist had nine scrolls that looked completely identical — but one was slightly heavier than the rest. He had only a balance scale and no weights. 'I must find the heavy scroll,' he told Chatur. 'What is the fewest number of weighings I need to guarantee finding it?' Chatur did not hesitate.",
+      hint: "Chatur says: 'Do not weigh them one by one — that wastes weighings. Think about how to split them into groups so each single weighing eliminates as many scrolls as possible at once.'",
+      winMessage: "'Two weighings,' said Chatur. 'Divide nine into three groups of three. Weigh group one against group two. If they balance, the heavy scroll is in group three. If one side is heavier, it is in that group. Now take those three scrolls and weigh any two of them. If they balance, the third is heavy. If not, the heavier side holds it. Two weighings — always enough.' The Archivist bowed.",
+      grade: "5-9",
       category: "3.3",
-      prompt: "You have 9 identical scrolls. One is heavier than the rest. You have a balance scale and may use it exactly twice. How do you find the heavy scroll?",
+      prompt: "The Archivist has 9 identical-looking scrolls. Exactly one is heavier than the rest. He has a balance scale (no weights). What is the MINIMUM number of weighings guaranteed to always find the heavy scroll?",
       options: [
-        { text: "Split into 3 groups of 3; weigh any two groups; repeat on the identified group of 3", icon: "⚖️" },
-        { text: "Weigh scrolls one-against-one until you find the heavy one (up to 4 weighings)", icon: "🔄" },
-        { text: "Split into 2 groups of 4; weigh them; the leftover is the heavy one if balanced", icon: "4️⃣" },
-        { text: "Weigh 4 vs 4 first; if balanced the remaining scroll is heavy; otherwise weigh 2 vs 2", icon: "🔢" }
+        { text: "1 weighing", icon: "1️⃣" },
+        { text: "2 weighings", icon: "2️⃣" },
+        { text: "3 weighings", icon: "3️⃣" },
+        { text: "4 weighings", icon: "4️⃣" }
       ],
-      correctIndex: 0,
-      explanation: "Divide into three groups of 3. Weigh group A vs group B. If A is heavier, the heavy scroll is in A; if B is heavier, it's in B; if balanced, it's in C. Now weigh two scrolls from the identified group against each other — if one tips down, that's it; if balanced, it's the third. Two weighings always suffice for 9 items."
+      correctIndex: 1,
+      explanation: "Divide the 9 scrolls into 3 groups of 3. Weigh group 1 vs group 2. If they balance, the heavy scroll is in group 3. If one side is heavier, it is in that group. You now have 3 suspect scrolls. Weigh any 2 of them: if they balance, the third is heavy; if not, the heavier side holds it. Total: 2 weighings, always sufficient."
     }
   },
 
@@ -376,35 +356,20 @@ export const MONTH_1_PUZZLES: PuzzleEntry[] = [
     engine_type: "sudoku",
     day_of_week: 6,
     week_number: 0,
-    grade_band: "1-3",
+    grade_band: "2-5",
     config: {
       id: "sudoku_20260228",
-      title: "Star Sudoku — Festival Grid",
-      storyBeat: "For the Festival of Stars, the children of Budhipur arranged glowing lanterns in a four-by-four grid — four kinds of stars, each appearing exactly once in every row, column, and 2×2 corner. Chatur helped the youngest children fill in the blank spots without any two of the same star touching in a line.",
-      hint: "Chatur says: 'Fill the corners of each 2×2 block first — the stars have no choice there.'",
-      winMessage: "Every lantern found its place. The grid blazed with four kinds of stars, each row and column perfectly balanced. The children cheered. Chatur straightened the last lantern and went to fetch more chai.",
-      grade: "1-3",
-      category: "1.1",
+      title: "The Star-Counter's Grid",
+      storyBeat: "The temple astronomer kept count of the night sky with four kinds of stars — bright stars ⭐, glowing stars 🌟, spinning stars 💫, and sparkling stars ✨. She arranged them in a four-by-four grid where every row, every column, and every square of four held each kind of star exactly once. 'Can you complete her count?' she asked Hari.",
+      hint: "Chatur says: 'Every row, column, and 2×2 square must hold all four star symbols. Start with the row or box that already has the most stars filled in.'",
+      winMessage: "The grid was complete: every row, column, and square of four held all four kinds of star. The astronomer looked up from her notebook. 'The sky is in order,' she said simply.",
+      grade: "2-5",
+      category: "2.4",
       size: 4,
       digits: ["⭐", "🌟", "💫", "✨"],
-      givens: [
-        "⭐", 0, 0, "🌟",
-        0, "💫", "⭐", 0,
-        0, "⭐", "🌟", 0,
-        "🌟", 0, 0, "💫"
-      ],
-      solution: [
-        "⭐", "✨", "💫", "🌟",
-        "🌟", "💫", "⭐", "✨",
-        "💫", "⭐", "🌟", "✨",
-        "🌟", "⭐", "✨", "💫"
-      ],
-      regions: [
-        [0,0,1,1],
-        [0,0,1,1],
-        [2,2,3,3],
-        [2,2,3,3]
-      ]
+      givens: ["⭐", 0, 0, "✨", 0, "✨", 0, 0, "🌟", 0, 0, 0, 0, 0, "🌟", "⭐"],
+      solution: ["⭐", "🌟", "💫", "✨", "💫", "✨", "⭐", "🌟", "🌟", "⭐", "✨", "💫", "✨", "💫", "🌟", "⭐"],
+      regions: [[0,1,4,5],[2,3,6,7],[8,9,12,13],[10,11,14,15]]
     }
   },
 
