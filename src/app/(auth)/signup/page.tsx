@@ -30,9 +30,8 @@ export default function SignupPage() {
       setError(error.message);
       setLoading(false);
     } else if (data.session) {
-      // Email confirmation is off — user is signed in immediately
-      router.push('/');
-      router.refresh();
+      // Email confirmation is off — hard redirect so server component sees the session cookie
+      window.location.href = '/';
     } else {
       // Email confirmation is on — tell them to check their inbox
       setNotice('Account created! Check your email and click the confirmation link, then sign in.');
