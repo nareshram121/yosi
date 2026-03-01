@@ -12,7 +12,7 @@ INSERT INTO puzzles (id, puzzle_date, engine_type, config, day_of_week, week_num
 
 -- Day 2 · Mar 2 · Flow · Week 1
 ('2026-03-02', '2026-03-02', 'flow',
- '{"id":"flow_20260302","title":"Threads of the Morning Market","storyBeat":"Chatur loved the way the Bazaar woke up — bolt by bolt, stall by stall, each color unfurling like a flag claiming its corner of the lane.","hint":"Chatur says: ''Start from a corner and see which color has the clearest road — then let the others follow.''","winMessage":"Every bolt of cloth found its matching bale, and the lane shimmered like a festival banner.","grade":"2-3","category":"1.2","grid":4,"pairs":[{"id":"R","color":"#e05050","start":[0,0],"end":[3,3]},{"id":"B","color":"#4a90d9","start":[0,3],"end":[3,0]},{"id":"G","color":"#3a7d44","start":[0,1],"end":[2,3]},{"id":"Y","color":"#e8a820","start":[1,0],"end":[3,2]}]}',
+ '{"id":"flow_20260302","title":"Threads of the Morning Market","storyBeat":"Chatur loved the way the Bazaar woke up — bolt by bolt, stall by stall, each color unfurling like a flag claiming its corner of the lane.","hint":"Chatur says: ''Start from a corner and see which color has the clearest road — then let the others follow.''","winMessage":"Every bolt of cloth found its matching bale, and the lane shimmered like a festival banner.","grade":"2-3","category":"1.2","grid":4,"pairs":[{"id":"R","color":"#e05050","start":[0,0],"end":[3,1]},{"id":"B","color":"#4a90d9","start":[0,2],"end":[2,1]},{"id":"G","color":"#3a7d44","start":[0,3],"end":[2,2]},{"id":"Y","color":"#e8a820","start":[2,3],"end":[3,2]}]}',
  1, 1, '2-3'),
 
 -- Day 3 · Mar 3 · Deduction · Week 1
@@ -47,7 +47,7 @@ INSERT INTO puzzles (id, puzzle_date, engine_type, config, day_of_week, week_num
 
 -- Day 9 · Mar 9 · Flow · Week 2
 ('2026-03-09', '2026-03-09', 'flow',
- '{"id":"flow_20260309","title":"The Lamp-Lighter''s Routes","storyBeat":"Each evening before dusk, the lamp-lighter of Budhipur walked every lane to light the oil lamps.","hint":"Chatur says: ''On a five-by-five grid the paths feel tight, but every cell must glow. The corners tend to help you begin.''","winMessage":"Every lamp blazed that evening, and not a single path had crossed another.","grade":"4-6","category":"1.2","grid":5,"pairs":[{"id":"R","color":"#e05050","start":[0,0],"end":[4,4]},{"id":"B","color":"#4a90d9","start":[0,4],"end":[4,0]},{"id":"G","color":"#3a7d44","start":[0,2],"end":[3,2]},{"id":"Y","color":"#e8a820","start":[1,1],"end":[4,2]},{"id":"P","color":"#9b59b6","start":[2,0],"end":[2,4]}]}',
+ '{"id":"flow_20260309","title":"The Lamp-Lighter''s Routes","storyBeat":"Each evening before dusk, the lamp-lighter of Budhipur walked every lane to light the oil lamps.","hint":"Chatur says: ''On a five-by-five grid the paths feel tight, but every cell must glow. The corners tend to help you begin.''","winMessage":"Every lamp blazed that evening, and not a single path had crossed another.","grade":"4-6","category":"1.2","grid":5,"pairs":[{"id":"R","color":"#e05050","start":[0,1],"end":[1,0]},{"id":"B","color":"#4a90d9","start":[0,4],"end":[3,3]},{"id":"G","color":"#3a7d44","start":[0,3],"end":[4,1]},{"id":"Y","color":"#e8a820","start":[1,1],"end":[4,0]},{"id":"P","color":"#9b59b6","start":[2,4],"end":[4,2]}]}',
  1, 2, '4-6'),
 
 -- Day 10 · Mar 10 · Deduction · Week 2
@@ -82,7 +82,7 @@ INSERT INTO puzzles (id, puzzle_date, engine_type, config, day_of_week, week_num
 
 -- Day 16 · Mar 16 · Flow · Week 3
 ('2026-03-16', '2026-03-16', 'flow',
- '{"id":"flow_20260316","title":"Messenger Birds and Their Roosts","storyBeat":"The Archive kept six messenger pigeons, each banded with a different colour, each flying a dedicated route.","hint":"Chatur says: ''On a six-by-six sky, the wingtips must never touch. Let the bird farthest from home fly first.''","winMessage":"Every pigeon found its roost before the evening bell. The bird-keeper called it a miracle. Chatur called it geometry.","grade":"4-6","category":"1.2","grid":6,"pairs":[{"id":"R","color":"#e05050","start":[0,0],"end":[5,5]},{"id":"B","color":"#4a90d9","start":[0,5],"end":[5,0]},{"id":"G","color":"#3a7d44","start":[0,2],"end":[4,3]},{"id":"Y","color":"#e8a820","start":[1,0],"end":[5,3]},{"id":"P","color":"#9b59b6","start":[2,5],"end":[3,1]},{"id":"O","color":"#e8803a","start":[1,3],"end":[4,0]}]}',
+ '{"id":"flow_20260316","title":"Messenger Birds and Their Roosts","storyBeat":"The Archive kept six messenger pigeons, each banded with a different colour, each flying a dedicated route.","hint":"Chatur says: ''On a six-by-six sky, the wingtips must never touch. Let the bird farthest from home fly first.''","winMessage":"Every pigeon found its roost before the evening bell. The bird-keeper called it a miracle. Chatur called it geometry.","grade":"4-6","category":"1.2","grid":6,"pairs":[{"id":"R","color":"#e05050","start":[0,0],"end":[3,2]},{"id":"G","color":"#3a7d44","start":[0,3],"end":[3,5]},{"id":"B","color":"#4a90d9","start":[1,0],"end":[4,0]},{"id":"Y","color":"#e8a820","start":[1,3],"end":[4,3]},{"id":"P","color":"#9b59b6","start":[3,1],"end":[5,0]},{"id":"O","color":"#e8803a","start":[3,4],"end":[5,3]}]}',
  1, 3, '4-6'),
 
 -- Day 17 · Mar 17 · Deduction · Week 3
@@ -107,7 +107,7 @@ INSERT INTO puzzles (id, puzzle_date, engine_type, config, day_of_week, week_num
 
 -- Day 21 · Mar 21 · Flow · Week 3
 ('2026-03-21', '2026-03-21', 'flow',
- '{"id":"flow_20260321","title":"Festival Procession Paths","storyBeat":"The Vernal Festival procession had five parade groups, each assigned a colour and a route through the six-lane city.","hint":"Chatur says: ''A festival route that traps itself in a corner has brought the parade to a standstill. Think ahead before you march.''","winMessage":"Five processions wound through Budhipur without a single tangle.","grade":"4-6","category":"1.2","grid":6,"pairs":[{"id":"R","color":"#e05050","start":[0,1],"end":[5,4]},{"id":"B","color":"#4a90d9","start":[0,4],"end":[5,1]},{"id":"G","color":"#3a7d44","start":[0,0],"end":[5,5]},{"id":"Y","color":"#e8a820","start":[2,0],"end":[3,5]},{"id":"P","color":"#9b59b6","start":[1,5],"end":[4,0]}]}',
+ '{"id":"flow_20260321","title":"Festival Procession Paths","storyBeat":"The Vernal Festival procession had five parade groups, each assigned a colour and a route through the six-lane city.","hint":"Chatur says: ''A festival route that traps itself in a corner has brought the parade to a standstill. Think ahead before you march.''","winMessage":"Five processions wound through Budhipur without a single tangle.","grade":"4-6","category":"1.2","grid":6,"pairs":[{"id":"R","color":"#e05050","start":[0,0],"end":[5,0]},{"id":"B","color":"#4a90d9","start":[0,5],"end":[5,5]},{"id":"G","color":"#3a7d44","start":[0,1],"end":[1,1]},{"id":"Y","color":"#e8a820","start":[2,1],"end":[3,1]},{"id":"P","color":"#9b59b6","start":[4,1],"end":[5,1]}]}',
  6, 3, '4-6'),
 
 -- Day 22 · Mar 22 · Deduction · Week 4
